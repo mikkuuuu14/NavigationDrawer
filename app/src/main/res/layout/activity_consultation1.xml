@@ -85,7 +85,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Proceed"
-        android:id="@+id/button"
+        android:id="@+id/Proceed"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

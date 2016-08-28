@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start consultation"
-        android:id="@+id/button2"
+        android:id="@+id/Start"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

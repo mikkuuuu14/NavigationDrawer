@@ -25,7 +25,7 @@ public class ConsultationActivity1 extends AppCompatActivity {
     public void addListenerOnButton() {
         final Context context = this;
 
-        button2 = (Button) findViewById(R.id.button);
+        button2 = (Button) findViewById(R.id.Proceed);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
