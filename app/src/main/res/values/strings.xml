@@ -8,4 +8,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_select_symptoms">Please select symptom(s)</string>
+    <string name="label_selected_symptoms">Selected symptom(s)</string>
+    <string name="error_symptoms_number">You can only select up to 3 symptoms</string>
+    <string name="label_ok">OK</string>
 </resources>
