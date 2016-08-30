@@ -1,4 +1,4 @@
-package com.javahelps.navigationdrawer.NavDrawer;
+package com.javahelps.navigationdrawer.fragments;
 
 import android.content.Context;
 import android.net.Uri;

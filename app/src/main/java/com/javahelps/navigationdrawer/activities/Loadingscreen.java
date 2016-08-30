@@ -1,11 +1,14 @@
-package com.javahelps.navigationdrawer.NavDrawer;
+package com.javahelps.navigationdrawer.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.javahelps.navigationdrawer.R;
+import com.javahelps.navigationdrawer.fragments.MainActivity;
 
 public class Loadingscreen extends AppCompatActivity {
 
@@ -18,7 +21,8 @@ public class Loadingscreen extends AppCompatActivity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_loadingscreen);
 
         /* New Handler to start the Menu-Activity

@@ -3,10 +3,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/pulse"
-            android:title="Home" />
-        <item
             android:id="@+id/nav_consultation"
             android:icon="@drawable/pill"
             android:title="Start Consultation" />
@@ -17,17 +13,19 @@
     </group>
 
     <item android:title="Communicate">
-
         <menu>
-
-            <item
-            android:id="@+id/nav_help"
-            android:icon="@mipmap/help"
-            android:title="Help" />
-            <item
-                android:id="@+id/nav_aboutus"
-                android:icon="@mipmap/aboutus"
-                android:title="About Us" />
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_help"
+                    android:icon="@mipmap/help"
+                    android:title="Help" />
+                <item
+                    android:id="@+id/nav_aboutus"
+                    android:icon="@mipmap/aboutus"
+                    android:title="About Us" />
+            </group>
         </menu>
     </item>
 </menu>
+
+

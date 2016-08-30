@@ -1,4 +1,4 @@
-package com.javahelps.navigationdrawer.NavDrawerActivities;
+package com.javahelps.navigationdrawer.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

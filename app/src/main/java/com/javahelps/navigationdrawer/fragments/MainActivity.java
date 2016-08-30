@@ -1,5 +1,6 @@
-package com.javahelps.navigationdrawer.NavDrawer;
+package com.javahelps.navigationdrawer.fragments;
 
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,13 +11,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.javahelps.navigationdrawer.R;
+import com.javahelps.navigationdrawer.database.DBHandler;
+import com.javahelps.navigationdrawer.models.Disease;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnFragmentInteractionListener {
+
+
+    SharedPreferences prefs = null;
 
     @Override
     public void onFragmentInteraction(Uri uri) {
@@ -30,6 +38,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setTitle("Ask D' Doctor");
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -39,8 +49,17 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        prefs = getSharedPreferences("com.javahelps.navigationdrawer", MODE_PRIVATE);
+
+        //if first time run, insert diseases to database
+        if (prefs.getBoolean("firstrun", true)) {
+            insertDiseasesToDB();
+            prefs.edit().putBoolean("firstrun", false).commit();
+        }
+
+
         // Set the home as default
-        Fragment fragment = new HomeFragment();
+        Fragment fragment = new ConsultationFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content, fragment)
@@ -57,12 +76,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -100,7 +113,7 @@ public class MainActivity extends AppCompatActivity
 
         else {
             // Anything else is home
-            fragment = new HomeFragment();
+            fragment = new ConsultationFragment();
         }
 
         // Insert the fragment by replacing any existing fragment
@@ -113,6 +126,30 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void insertDiseasesToDB() {
+        DBHandler db = new DBHandler(MainActivity.this);
+        db.addDisease(new Disease("sakit 1", "desc 1", "symptoms 1", "prevention 1", "medicine 1"));
+        db.addDisease(new Disease("sakit 2", "desc 2", "symptoms 1", "prevention 1", "medicine 1"));
+        db.addDisease(new Disease("sakit 3", "desc 3", "symptoms 1", "prevention 1", "medicine 1"));
+        db.addDisease(new Disease("sakit 4", "desc 4", "symptoms 1", "prevention 1", "medicine 1"));
+        db.addDisease(new Disease("sakit 5", "desc 5", "symptoms 1", "prevention 1", "medicine 1"));
+        db.addDisease(new Disease("sakit 6", "desc 6", "sipon", "prevention 1", "medicine 1"));
+
+
+        List<Disease> diseases = db.getAllDisease();
+
+        for (Disease disease : diseases) {
+            String log = "Id: " + disease.getId() + " ,Name: " + disease.getName();
+            Log.d("Shop: : ", log);
+        }
+
+        Disease disease = db.getDisease("sipon");
+        Log.d("DISEASE", "DISEASE"+disease.getName());
+    }
+
+
+
 }
     interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);

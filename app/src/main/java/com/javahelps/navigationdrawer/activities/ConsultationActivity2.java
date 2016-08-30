@@ -1,4 +1,4 @@
-package com.javahelps.navigationdrawer.NavDrawerActivities;
+package com.javahelps.navigationdrawer.activities;
 
 import android.content.Context;
 import android.content.Intent;
