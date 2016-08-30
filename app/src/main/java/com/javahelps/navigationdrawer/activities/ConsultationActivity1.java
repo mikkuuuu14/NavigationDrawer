@@ -128,11 +128,22 @@ public class ConsultationActivity1 extends AppCompatActivity {
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ConsultationActivity1.this, ConsultationActivity2.class);
-            }
+            public void onClick(View v) {
+                if (symptomsCounter == 0) {
+                    Helper.showErrorDialog(context, getString(R.string.label_select_symptoms), "OK");
+                } else {
+                    ArrayList<String> symptoms = new ArrayList<String>();
+                    for (int i = 0; i < symptomsCounter; i++) {
+                        symptoms.add(selectedSymptoms.get(i));
+                    }
+                    Intent intent = new Intent(ConsultationActivity1.this, ConsultationActivity2.class);
+                    intent.putStringArrayListExtra("symptoms", symptoms);
+                    startActivity(intent);
+                }
 
+            }
         });
+
     }
 
     @Override
