@@ -55,36 +55,10 @@ public class ConsultationActivity1 extends AppCompatActivity {
         symptomsListView = (ListView) findViewById(R.id.selectionList);
 
         List<String> symptomsList = new ArrayList<String>();
-        symptomsList.add("one");
-        symptomsList.add("two");
-        symptomsList.add("three");
-        symptomsList.add("four");
-        symptomsList.add("five");
-        symptomsList.add("six");
-        symptomsList.add("one");
-        symptomsList.add("two");
-        symptomsList.add("three");
-        symptomsList.add("four");
-        symptomsList.add("five");
-        symptomsList.add("six");
-        symptomsList.add("one");
-        symptomsList.add("two");
-        symptomsList.add("three");
-        symptomsList.add("four");
-        symptomsList.add("five");
-        symptomsList.add("six");
-        symptomsList.add("one");
-        symptomsList.add("two");
-        symptomsList.add("three");
-        symptomsList.add("four");
-        symptomsList.add("five");
-        symptomsList.add("six");
-        symptomsList.add("one");
-        symptomsList.add("two");
-        symptomsList.add("three");
-        symptomsList.add("four");
-        symptomsList.add("five");
-        symptomsList.add("six");
+        symptomsList.add("symptoms 1");
+        symptomsList.add("symptoms 2");
+        symptomsList.add("symptoms 3");
+        symptomsList.add("symptoms 4");
 
         symptomsListAdapter = new CustomListAdapter(ConsultationActivity1.this, symptomsList);
 
@@ -96,9 +70,13 @@ public class ConsultationActivity1 extends AppCompatActivity {
                 symptomsCounter = symptomsCounter + 1;
 
                 if (symptomsCounter <= 3) {
-                    selectedSymptoms.add(symptomsListAdapter.getItem(position).toString());
-                    selectedSymptomsListAdapter = new SelectedSymptomsListAdapter(ConsultationActivity1.this, selectedSymptoms);
-                    selectedList.setAdapter(selectedSymptomsListAdapter);
+                    if (!selectedSymptoms.contains(symptomsListAdapter.getItem(position))) {
+                        selectedSymptoms.add(symptomsListAdapter.getItem(position).toString());
+                        selectedSymptomsListAdapter = new SelectedSymptomsListAdapter(ConsultationActivity1.this, selectedSymptoms);
+                        selectedList.setAdapter(selectedSymptomsListAdapter);
+                    } else {
+                        symptomsCounter = symptomsCounter - 1;
+                    }
                 } else {
                     Helper.showErrorDialog(context, getString(R.string.error_symptoms_number), getString(R.string.label_ok));
                 }

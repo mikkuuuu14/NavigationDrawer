@@ -103,15 +103,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_consultation) {
             // Handle the settings action
             fragment = new ConsultationFragment();
-        } else if ( id == R.id.nav_first) {
+        } else if (id == R.id.nav_first) {
             fragment = new FirstFragment();
-        } else if ( id == R.id.nav_help) {
+        } else if (id == R.id.nav_help) {
             fragment = new HelpFragment();
-        } else if ( id == R.id.nav_aboutus) {
+        } else if (id == R.id.nav_aboutus) {
             fragment = new AboutFragment();
-        }
-
-        else {
+        } else {
             // Anything else is home
             fragment = new ConsultationFragment();
         }
@@ -129,31 +127,20 @@ public class MainActivity extends AppCompatActivity
 
     private void insertDiseasesToDB() {
         DBHandler db = new DBHandler(MainActivity.this);
-        db.addDisease(new Disease("sakit 1", "desc 1", "symptoms 1", "prevention 1", "medicine 1"));
-        db.addDisease(new Disease("sakit 2", "desc 2", "symptoms 1", "prevention 1", "medicine 1"));
-        db.addDisease(new Disease("sakit 3", "desc 3", "symptoms 1", "prevention 1", "medicine 1"));
-        db.addDisease(new Disease("sakit 4", "desc 4", "symptoms 1", "prevention 1", "medicine 1"));
-        db.addDisease(new Disease("sakit 5", "desc 5", "symptoms 1", "prevention 1", "medicine 1"));
-        db.addDisease(new Disease("sakit 6", "desc 6", "sipon", "prevention 1", "medicine 1"));
-
-
-        List<Disease> diseases = db.getAllDisease();
-
-        for (Disease disease : diseases) {
-            String log = "Id: " + disease.getId() + " ,Name: " + disease.getName();
-            Log.d("Shop: : ", log);
-        }
-
-        Disease disease = db.getDisease("sipon");
-        Log.d("DISEASE", "DISEASE"+disease.getName());
+        db.addDisease(new Disease(1, "sakit 1", "desc 1", "symptoms 1", "prevention 1", "medicine 1", R.drawable.angelo));
+        db.addDisease(new Disease(2, "sakit 2", "desc 2", "symptoms 2", "prevention 1", "medicine 1", R.drawable.angelo));
+        db.addDisease(new Disease(3, "sakit 3", "desc 3", "symptoms 3", "prevention 1", "medicine 1", R.drawable.angelo));
+        db.addDisease(new Disease(4, "sakit 4", "desc 4", "symptoms 4", "prevention 1", "medicine 1", R.drawable.angelo));
+        db.addDisease(new Disease(5, "sakit 5", "desc 5", "symptoms 1", "prevention 1", "medicine 1", R.drawable.angelo));
+        db.addDisease(new Disease(6, "sakit 6", "desc 6", "sipon", "prevention 1", "medicine 1", R.drawable.angelo));
     }
-
 
 
 }
-    interface OnFragmentInteractionListener {
-        void onFragmentInteraction(Uri uri);
 
-    }
+interface OnFragmentInteractionListener {
+    void onFragmentInteraction(Uri uri);
+
+}
 
 

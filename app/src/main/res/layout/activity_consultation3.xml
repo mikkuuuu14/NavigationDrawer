@@ -22,7 +22,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/actionBar"
@@ -35,10 +35,10 @@
         android:textSize="20sp" />
 
     <ImageView
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/name"
         android:layout_width="500dp"
         android:layout_height="250dp"
-        android:id="@+id/imageView2"
+        android:id="@+id/icon"
         android:src="@drawable/flue"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_below="@+id/imageView2"
+        android:layout_below="@+id/icon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="55dp" >
 
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Usually referred to as the flu or grippe, influenza is a highly infectious respiratory disease. The disease is caused by certain strains of the influenza virus. When the virus is inhaled, it attacks cells in the upper respiratory tract, causing typical flu symptoms such as fatigue, fever and chills, a hacking cough , and body aches. Influenza victims are also susceptible to potentially life-threatening secondary infections. Although the stomach or intestinal &quot;flu&quot; is commonly blamed for stomach upsets and diarrhea , the influenza virus rarely causes gastrointestinal symptoms. Such symptoms are most likely due to other organisms such as rotavirus, Salmonella , Shigella , or Escherichia coli ."
-            android:id="@+id/textView4" />
+            android:id="@+id/description" />
     </ScrollView>
 
 </RelativeLayout>

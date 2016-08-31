@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.javahelps.navigationdrawer.R;
+import com.javahelps.navigationdrawer.models.Disease;
 import com.javahelps.navigationdrawer.models.Illness;
 
 import java.util.List;
@@ -18,10 +19,10 @@ import java.util.List;
  */
 public class PossibleIlnessListAdapter extends BaseAdapter {
 
-    private List<Illness> list;
+    private List<Disease> list;
     private Activity activity;
 
-    public PossibleIlnessListAdapter( Activity activity, List<Illness> list) {
+    public PossibleIlnessListAdapter( Activity activity, List<Disease> list) {
         this.list = list;
         this.activity = activity;
     }
@@ -57,8 +58,8 @@ public class PossibleIlnessListAdapter extends BaseAdapter {
         }
 
         holder.illness.setText(list.get(position).getName());
-        holder.desc.setText(list.get(position).getDesc());
-        holder.icon.setImageResource(list.get(position).getImg());
+        holder.desc.setText(list.get(position).getDescription());
+        holder.icon.setImageResource(Integer.valueOf(list.get(position).getIcon()));
 
 
         return convertView;

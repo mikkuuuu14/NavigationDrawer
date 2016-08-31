@@ -4,10 +4,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.javahelps.navigationdrawer.R;
 
 public class ConsultationActivity3 extends AppCompatActivity {
+
+    String name, desc;
+    int icon;
+
+    TextView nameText, descText;
+    ImageView iconImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +25,19 @@ public class ConsultationActivity3 extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Illness Description");
+
+        Bundle data = getIntent().getExtras();
+        name = data.getString("name");
+        desc = data.getString("description");
+        icon = data.getInt("icon");
+
+        nameText = (TextView) findViewById(R.id.name);
+        descText= (TextView) findViewById(R.id.description);
+        iconImage = (ImageView) findViewById(R.id.icon);
+
+        nameText.setText(name);
+        descText.setText(desc);
+        iconImage.setImageResource(icon);
 
     }
 
