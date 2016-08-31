@@ -55,7 +55,7 @@ public class ConsultationActivity1 extends AppCompatActivity {
         symptomsListView = (ListView) findViewById(R.id.selectionList);
 
         List<String> symptomsList = new ArrayList<String>();
-        symptomsList.add("one");
+        symptomsList.add("AIDS");
         symptomsList.add("two");
         symptomsList.add("three");
         symptomsList.add("four");
