@@ -9,29 +9,23 @@ public class Disease {
     String symptoms;
     String prevention;
     String medicine;
+    int icon;
 
     public Disease() {
 
     }
 
 
-    public Disease(int id, String name, String description, String symptoms, String prevention, String medicine) {
+    public Disease(int id, String name, String description, String symptoms, String prevention, String medicine, int icon) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.symptoms = symptoms;
         this.prevention = prevention;
         this.medicine = medicine;
+        this.icon = icon;
     }
 
-    public Disease(String name, String description, String symptoms, String prevention, String medicine) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.symptoms = symptoms;
-        this.prevention = prevention;
-        this.medicine = medicine;
-    }
 
     public String getMedicine() {
         return medicine;
@@ -39,6 +33,10 @@ public class Disease {
 
     public int getId() {
         return id;
+    }
+
+    public int getIcon() {
+        return icon;
     }
 
     public String getName() {
@@ -79,5 +77,9 @@ public class Disease {
 
     public void setMedicine(String medicine) {
         this.medicine = medicine;
+    }
+
+    public void setIcon(int icon) {
+        this.icon = icon;
     }
 }
