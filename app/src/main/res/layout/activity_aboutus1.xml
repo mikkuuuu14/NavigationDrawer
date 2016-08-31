@@ -5,10 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blue1"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TabHost.AboutusActivity1">
 
 
@@ -30,7 +26,8 @@
         </android.support.v7.widget.Toolbar>
         <android.support.design.widget.TabLayout
             android:id="@+id/tab"
-            android:background="#46AF4A"
+            app:tabTextColor="#fff"
+            android:background="#000"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:tabMode="fixed"

@@ -127,12 +127,28 @@ public class MainActivity extends AppCompatActivity
 
     private void insertDiseasesToDB() {
         DBHandler db = new DBHandler(MainActivity.this);
-        db.addDisease(new Disease(1, "sakit 1", "desc 1", "symptoms 1", "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(2, "sakit 2", "desc 2", "symptoms 2", "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(3, "sakit 3", "desc 3", "symptoms 3", "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(4, "sakit 4", "desc 4", "symptoms 4", "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(5, "sakit 5", "desc 5", "symptoms 1", "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(6, "sakit 6", "desc 6", "sipon", "prevention 1", "medicine 1", R.drawable.angelo));
+        //Micah REMEMBER : ( Illness, Description, Symptoms, Prevention, Medicine )
+        db.addDisease(new Disease(1,  "Influenza",               "FLU",      "Fever",               "prevention 1", "medicine 1", R.drawable.fever1));
+        db.addDisease(new Disease(2,  "Sore Eyes",               "EYE",      "Eye Redness",         "prevention 1", "medicine 1", R.drawable.angelo));
+        db.addDisease(new Disease(3,  "Common Cold",             "COLD",     "Fever",               "prevention 1", "medicine 1", R.drawable.cold));
+        db.addDisease(new Disease(4,  "Tonsillitis",             "TONSIL",   "Fever",               "prevention 1", "medicine 1", R.drawable.cedric));
+        db.addDisease(new Disease(5,  "Asthma",                  "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.asthma));
+        db.addDisease(new Disease(6,  "Anemia",                  "BLOOD",    "Fatigue",             "prevention 1", "medicine 1", R.drawable.anemia));
+        db.addDisease(new Disease(7,  "Pneumonia",               "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.pneumonia));
+        db.addDisease(new Disease(8,  "Tuberculosis",            "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.tubercolosis));
+        db.addDisease(new Disease(9,  "Skin Asthma",             "SKIN",     "Skin Complications",  "prevention 1", "medicine 1", R.drawable.skinasthma));
+        db.addDisease(new Disease(10, "Constipation",            "BODY",     "Stomach Ache",        "prevention 1", "medicine 1", R.drawable.constipated));
+        db.addDisease(new Disease(11, "Heart Burn",              "HEART",    "Chest Complications", "prevention 1", "medicine 1", R.drawable.heartburn));
+        db.addDisease(new Disease(12, "Diarrhea",                "STOMACH",  "Fever",               "prevention 1", "medicine 1", R.drawable.diarrhea));
+        db.addDisease(new Disease(13, "Stiff Neck",              "NECK",     "Fever",               "prevention 1", "medicine 1", R.drawable.stiffneck));
+        db.addDisease(new Disease(14, "Migraine",                "HEAD",     "Headache",            "prevention 1", "medicine 1", R.drawable.headache));
+        db.addDisease(new Disease(15, "Gastroenteritis",         "STOMACH",  "Stomach Ache",        "prevention 1", "medicine 1", R.drawable.gastro));
+        db.addDisease(new Disease(16, "Hand-Foot-Mouth Disease", "BREATH",   "Sore Throat",         "prevention 1", "medicine 1", R.drawable.headandfoot));
+        db.addDisease(new Disease(17, "Dehydration",             "BODY",     "Dizziness",           "prevention 1", "medicine 1", R.drawable.dydrate));
+        db.addDisease(new Disease(18, "Dermatitis",              "SKIN",     "Skin Complications",  "prevention 1", "medicine 1", R.drawable.derma));
+        db.addDisease(new Disease(19, "Sinusitis",               "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.sinus));
+        db.addDisease(new Disease(20, "Ulcer",                   "BODY",     "Vomiting",            "prevention 1", "medicine 1", R.drawable.ulcer));
+
     }
 
 

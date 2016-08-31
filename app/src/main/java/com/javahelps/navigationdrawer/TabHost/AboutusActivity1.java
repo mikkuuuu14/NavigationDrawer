@@ -34,6 +34,7 @@ public class AboutusActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_aboutus1);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -88,6 +89,7 @@ public class AboutusActivity1 extends AppCompatActivity {
         adapter.addFrag(new ThreeFragment(), "THREE");
         adapter.addFrag(new FourthFragment(),"FOURTH");
         adapter.addFrag(new FifthFragment(),"FIFTH");
+
         viewPager.setAdapter(adapter);
     }
 

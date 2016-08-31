@@ -23,7 +23,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.ConsultationActivity2" />
         <activity android:name=".activities.HealthkitActivity1" />
-        <activity android:name=".TabHost.AboutusActivity1" />
+        <activity android:name=".TabHost.AboutusActivity1"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.HomeActivity1" />
         <activity android:name=".activities.HelpActivity1" />
         <activity android:name=".activities.ConsultationActivity3"></activity>

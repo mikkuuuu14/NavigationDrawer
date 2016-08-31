@@ -69,15 +69,15 @@ public class ConsultationActivity2 extends AppCompatActivity {
 
 
         List<Illness> list = new ArrayList<Illness>();
-        list.add(new Illness("one", "two", R.drawable.flu));
+        list.add(new Illness("one", "two", R.drawable.fever1));
         list.add(new Illness("one", "two", R.drawable.cold));
-        list.add(new Illness("one", "two", R.drawable.flu));
+        list.add(new Illness("one", "two", R.drawable.fever1));
         list.add(new Illness("one", "two", R.drawable.cold));
-        list.add(new Illness("one", "two", R.drawable.flu));
-        list.add(new Illness("one", "two", R.drawable.flu));
-        list.add(new Illness("one", "two", R.drawable.flu));
-        list.add(new Illness("one", "two", R.drawable.flu));
-        list.add(new Illness("one", "two", R.drawable.flu));
+        list.add(new Illness("one", "two", R.drawable.fever1));
+        list.add(new Illness("one", "two", R.drawable.fever1));
+        list.add(new Illness("one", "two", R.drawable.fever1));
+        list.add(new Illness("one", "two", R.drawable.fever1));
+        list.add(new Illness("one", "two", R.drawable.fever1));
 
         possibleIllnessList.setAdapter(new PossibleIlnessListAdapter(ConsultationActivity2.this, noRepeat));
 
