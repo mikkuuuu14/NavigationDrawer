@@ -128,9 +128,9 @@ public class MainActivity extends AppCompatActivity
     private void insertDiseasesToDB() {
         DBHandler db = new DBHandler(MainActivity.this);
         //Micah REMEMBER : ( Illness, Description, Symptoms, Prevention, Medicine )
-        db.addDisease(new Disease(1,  "Influenza",               "FLU",      "Fever",               "prevention 1", "medicine 1", R.drawable.fever1));
+        db.addDisease(new Disease(1,  "Influenza",               "FLU",      "Fever, Eye Redness",               "prevention 1", "medicine 1", R.drawable.fever1));
         db.addDisease(new Disease(2,  "Sore Eyes",               "EYE",      "Eye Redness",         "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(3,  "Common Cold",             "COLD",     "Fever",               "prevention 1", "medicine 1", R.drawable.cold));
+        db.addDisease(new Disease(3,  "Common Cold",             "COLD",     "Fever, Eye Redness",               "prevention 1", "medicine 1", R.drawable.cold));
         db.addDisease(new Disease(4,  "Tonsillitis",             "TONSIL",   "Fever",               "prevention 1", "medicine 1", R.drawable.cedric));
         db.addDisease(new Disease(5,  "Asthma",                  "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.asthma));
         db.addDisease(new Disease(6,  "Anemia",                  "BLOOD",    "Fatigue",             "prevention 1", "medicine 1", R.drawable.anemia));

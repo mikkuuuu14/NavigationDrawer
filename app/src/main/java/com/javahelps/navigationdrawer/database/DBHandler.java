@@ -94,7 +94,7 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_DISEASE, new String[]{KEY_ID,
                         KEY_NAME, KEY_DESCRIPTION, KEY_SYMPTOMS, KEY_PREVENTION, KEY_MEDICINE, KEY_ICON}, KEY_SYMPTOMS + " LIKE?",
-                new String[]{String.valueOf(key)}, null, null, null, null);
+                new String[]{"%" + key + "%"}, null, null, null, null);
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
