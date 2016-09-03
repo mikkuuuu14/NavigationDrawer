@@ -76,6 +76,7 @@ public class ConsultationActivity1 extends AppCompatActivity {
         symptomsList.add("Sneezing");
         symptomsList.add("Wheezing");
         symptomsList.add("Blurred Vision");
+        /*symptomsList.add("null");
         symptomsList.add("null");
         symptomsList.add("null");
         symptomsList.add("null");
@@ -85,11 +86,9 @@ public class ConsultationActivity1 extends AppCompatActivity {
         symptomsList.add("null");
         symptomsList.add("null");
         symptomsList.add("null");
-
         symptomsList.add("null");
         symptomsList.add("null");
-        symptomsList.add("null");
-        symptomsList.add("null");
+        symptomsList.add("null");*/
 
 
         symptomsListAdapter = new CustomListAdapter(ConsultationActivity1.this, symptomsList);

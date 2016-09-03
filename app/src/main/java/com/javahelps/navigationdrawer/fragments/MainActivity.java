@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_aboutus) {
             fragment = new AboutFragment();
         } else {
-            // Anything else is home
+            // Anything else is consultation
             fragment = new ConsultationFragment();
         }
 
@@ -128,9 +128,9 @@ public class MainActivity extends AppCompatActivity
     private void insertDiseasesToDB() {
         DBHandler db = new DBHandler(MainActivity.this);
         //Micah REMEMBER : ( Illness, Description, Symptoms, Prevention, Medicine )
-        db.addDisease(new Disease(1,  "Influenza",               "FLU",      "Fever, Eye Redness",               "prevention 1", "medicine 1", R.drawable.fever1));
+        db.addDisease(new Disease(1,  "Influenza",               "FLU",      "Fever, Eye Redness",  "prevention 1", "medicine 1", R.drawable.fever1));
         db.addDisease(new Disease(2,  "Sore Eyes",               "EYE",      "Eye Redness",         "prevention 1", "medicine 1", R.drawable.angelo));
-        db.addDisease(new Disease(3,  "Common Cold",             "COLD",     "Fever, Eye Redness",               "prevention 1", "medicine 1", R.drawable.cold));
+        db.addDisease(new Disease(3,  "Common Cold",             "COLD",     "Fever, Eye Redness",  "prevention 1", "medicine 1", R.drawable.cold));
         db.addDisease(new Disease(4,  "Tonsillitis",             "TONSIL",   "Fever",               "prevention 1", "medicine 1", R.drawable.cedric));
         db.addDisease(new Disease(5,  "Asthma",                  "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.asthma));
         db.addDisease(new Disease(6,  "Anemia",                  "BLOOD",    "Fatigue",             "prevention 1", "medicine 1", R.drawable.anemia));
@@ -149,7 +149,31 @@ public class MainActivity extends AppCompatActivity
         db.addDisease(new Disease(19, "Sinusitis",               "BREATH",   "Cough",               "prevention 1", "medicine 1", R.drawable.sinus));
         db.addDisease(new Disease(20, "Ulcer",                   "BODY",     "Vomiting",            "prevention 1", "medicine 1", R.drawable.ulcer));
 
+
+       /* if (db.addDisease(new Disease(1, "Influenza", "SHET", "Fever", "Prev", "Med", R.drawable.allan))) {
+            // Handle the settings action
+            fragment = new ConsultationFragment();
+        } else if (id == R.id.nav_first) {
+            fragment = new FirstFragment();
+        } else if (id == R.id.nav_help) {
+            fragment = new HelpFragment();
+        } else if (id == R.id.nav_aboutus) {
+            fragment = new AboutFragment();
+        } else {
+            // Anything else is consultation
+            fragment = new ConsultationFragment();
+        }
+
+
+         public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
+    }*/
 
 
 }
